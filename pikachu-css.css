@@ -41,7 +41,7 @@ body {
 .back-Picture {
   width: 100%;
   height: 1000px; /* 或 auto/百分比 */
-  background-image: url('/assets/images/full.JPG');
+  background-image: url('full.JPG');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -100,7 +100,7 @@ body {
   .back-Picture {
     width: 100%;
     height: 1000px; /* 或 auto/百分比 */
-    background-image: url('/assets/images/backPicture.PNG');
+    background-image: url('backPicture.PNG');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
