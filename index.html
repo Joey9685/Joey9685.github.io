@@ -1,147 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>皮卡丘的網頁</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/index.css" />
-  </head>
-  <body>
-    <div class="picture">
-      <img src="/assets/images/貓.png" alt="圖片" width="100px" />
-    </div>
-    <div class="title">< 西港皮卡丘 ></div>
+    <link rel="stylesheet" type="text/css" href="pikachu-css.css"/>
+</head>
+<body>
+    
+    <div class="picture"> <img src="貓.png" alt ="圖片" width="100px"> </div>  
+    <div class="title"> < 西港皮卡丘 > </div>
 
-    <!------------------------ 標籤 -------------------------->
 
-    <div style="display: flex">
-      <div
-        class="about"
-        onmouseover="over(this)"
-        onmouseout="out(this)"
-        onmousedown="down(this)"
-        onmouseup="up(this)"
-        onclick="changeToItem();"
-        onclick="change()"
-      >
-        關於我
-      </div>
 
-      <div
-        class="about"
-        onmouseover="over(this)"
-        onmouseout="out(this)"
-        onmousedown="down(this)"
-        onmouseup="up(this)"
-        onclick="changeToPika();"
-        onclick="change()"
-      >
-        皮卡丘
-      </div>
-    </div>
+<!------------------------ 標籤 --------------------------> 
 
-    <hr style="margin: 0px" />
-
-    <!------------------------ 關於我 -------------------------->
-
-    <div class="back-Picture" class="pikas" id="change">
-      <!------------------------ 聯絡資訊 -------------------------->
-
-      <div id="items">
-        <li class="contact">聯絡資訊</li>
-
-        <div class="item">
-          <!-- Facebook -->
-          <div
-            class="social"
-            onmouseover="over(this)"
-            onmouseout="out(this)"
-            onmousedown="down(this)"
-            onmouseup="up(this)"
-          >
-            <a href="https://www.facebook.com/youjun.huang1">
-              <img src="/assets/images/下載.png" width="25px" /> Facebook
-            </a>
-          </div>
-
-          <!-- Instagram -->
-          <div
-            class="social"
-            onmouseover="over(this)"
-            onmouseout="out(this)"
-            onmousedown="down(this)"
-            onmouseup="up(this)"
-          >
-            <a href="https://www.instagram.com/joey_9685/?next=%2F">
-              <img src="/assets/images/ig.png" width="25px" /> Instagram
-            </a>
-          </div>
-
-          <!-- Discord -->
-          <div
-            class="social"
-            onmouseover="over(this)"
-            onmouseout="out(this)"
-            onmousedown="down(this)"
-            onmouseup="up(this)"
-          >
-            <a href="https://discord.com/channels/@me">
-              <img src="/assets/images/dc.png" width="27px" /> Discord
-            </a>
-          </div>
-
-          <!-- Threads -->
-          <div
-            class="social"
-            onmouseover="over(this)"
-            onmouseout="out(this)"
-            onmousedown="down(this)"
-            onmouseup="up(this)"
-          >
-            <a href="https://www.threads.com/@pika._.0227">
-              <img src="/assets/images/Threads.png" width="28px" /> Threads
-            </a>
-          </div>
+    <div style="display: flex;">
+        <div class="about"
+            onmouseover="over(this)"onmouseout="out(this)"
+            onmousedown="down(this)"onmouseup="up(this)"
+            onclick="changeToItem();"onclick="change()"
+        >            
+            關於我
         </div>
-      </div>
 
-      <!------------------------ 皮卡丘 -------------------------->
+        <div class="about"
+            onmouseover="over(this)"onmouseout="out(this)"
+            onmousedown="down(this)"onmouseup="up(this)"
+            onclick="changeToPika();"onclick="change()"
+        >
+            皮卡丘
+        </div>
 
-      <div class="pikas" style="display: none" id="pika">
-        <img
-          id="One"
-          onclick="changeToP2()"
-          src="/assets/images/直播主1.jpg"
-          class="pika-style"
-        />
-
-        <img
-          id="Two"
-          style="display: none"
-          onclick="changeToP3()"
-          src="/assets/images/直播主2.jpg"
-          class="pika-style"
-        />
-
-        <img
-          id="Three"
-          style="display: none"
-          onclick="changeToP4()"
-          src="/assets/images/直播主3.jpg"
-          class="pika-style"
-        />
-
-        <img
-          id="Four"
-          style="display: none"
-          onclick="changeToP5()"
-          src="/assets/images/直播主4.jpg"
-          class="pika-style"
-        />
-      </div>
     </div>
 
-    <!------------------------ script -------------------------->
-    <script src="assets/js/index.js"></script>
-  </body>
+    <hr style=" margin: 0px ;" />
+
+<!------------------------ 關於我 -------------------------->
+
+    <div class="back-Picture" class="pikas"
+        id="change">
+
+<!------------------------ 聯絡資訊 -------------------------->
+        
+        <div id="items" >
+
+            <li class="contact">聯絡資訊</li>
+    
+            <div class="item" >
+                
+            <!-- Facebook -->
+                <diV class="social"
+                    onmouseover="over(this)"onmouseout="out(this)"
+                    onmousedown="down(this)"onmouseup="up(this)"
+                >
+                    <a href="https://www.facebook.com/youjun.huang1">
+                        <img src="下載.png" width="25px"/> Facebook 
+                    </a>
+                </diV>
+
+            <!-- Instagram -->
+                <div class="social"
+                    onmouseover="over(this)"onmouseout="out(this)"
+                    onmousedown="down(this)"onmouseup="up(this)"
+                >
+                    <a href="https://www.instagram.com/joey_9685/?next=%2F">
+                        <img src="ig.png" width="25px"/> Instagram 
+                    </a>
+                </div>
+
+            <!-- Discord -->
+                <div class="social"
+                    onmouseover="over(this)"onmouseout="out(this)"
+                    onmousedown="down(this)"onmouseup="up(this)"
+                >
+                    <a href="https://discord.com/channels/@me">
+                        <img src="dc.png" width="27px"/> Discord 
+                    </a>
+                </div>    
+
+            <!-- Threads -->
+                <div class="social"
+                    onmouseover="over(this)"onmouseout="out(this)"
+                    onmousedown="down(this)"onmouseup="up(this)"
+                >
+                    <a href="https://www.threads.com/@pika._.0227">
+                        <img src="Threads.png" width="28px"/> Threads 
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+<!------------------------ 皮卡丘 -------------------------->
+
+        <div class="pikas" style="display: none;"
+             id="pika"        
+        >            
+                <img    id="One" 
+                        onclick="changeToP2()"
+                        src="直播主1.jpg" class="pika-style"/>
+
+                <img    id="Two"   
+                        style="display:none" onclick="changeToP3()"
+                        src="直播主2.jpg" class="pika-style"/>
+                
+                <img    id="Three"   
+                        style="display:none" onclick="changeToP4()"
+                        src="直播主3.jpg" class="pika-style"/>   
+                        
+                <img    id="Four"   
+                        style="display:none" onclick="changeToP5()"
+                        src="直播主4.jpg" class="pika-style"/>                    
+
+        </div>
+
+    </div> 
+
+<!------------------------ script -------------------------->
+    <script>
+
+        // item 
+        function over(elem){
+            elem.style.backgroundImage="linear-gradient(90deg, #EC6DA4, #F4C465)";
+        }
+        function out(elem){
+            elem.style.backgroundImage="linear-gradient(90deg, #f4dabb, #f4dabb)";
+        }
+        function down(elem){
+            elem.style.fontWeight="bold";
+        }
+        function up(elem){
+            elem.style.fontWeight="normal";
+        }
+
+        function changeToPika(){
+            let itemDiv = document.querySelector("#items");
+            let pikaDiv = document.querySelector("#pika");
+            let changeDiv = document.querySelector("#change");
+
+            itemDiv.style.display="none";
+            pikaDiv.style.display="block";
+            changeDiv.style.display="flex";
+            changeDiv.style.justifyContent="center";
+            changeDiv.style.alignItems="center";
+
+        }
+        function changeToItem(){
+            let itemDiv = document.querySelector("#items");
+            let pikaDiv = document.querySelector("#pika");
+            let changeDiv = document.querySelector("#change");
+
+            itemDiv.style.display="block";
+            pikaDiv.style.display="none";
+            changeDiv.style.display="block";
+        }
+
+        function changeToP2(){
+            let changeP1 = document.querySelector("#One")
+            let changeP2 = document.querySelector("#Two")
+
+            changeP1.style.display="none";
+            changeP2.style.display="block";
+        }
+
+        function changeToP3(){
+            let changeP2 = document.querySelector("#Two")
+            let changeP3 = document.querySelector("#Three")
+
+            changeP2.style.display="none";
+            changeP3.style.display="block";
+        }
+
+        function changeToP4(){
+            let changeP3 = document.querySelector("#Three")
+            let changeP4 = document.querySelector("#Four")
+
+            changeP3.style.display="none";
+            changeP4.style.display="block";
+        }
+
+    </script>
+</body>
 </html>
