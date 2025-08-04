@@ -82,7 +82,7 @@ body {
 }
 
 .pika-style {
-  animation: fade 0.5s linear 0s 1;
+  animation: fade 0.25s linear 0s 1;
   height: 500px;
   border-radius: 80px;
 }
