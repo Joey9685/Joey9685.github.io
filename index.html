@@ -112,7 +112,11 @@
                         
                 <img    id="Four"   
                         style="display:none" onclick="changeToP5()"
-                        src="直播主4.jpg" class="pika-style"/>                    
+                        src="直播主4.jpg" class="pika-style"/>              
+                        
+                <img    id="Four"   
+                        style="display:none" onclick="changeToP1()"
+                        src="直播主6.jpg" class="pika-style"/>                                
 
         </div>
 
@@ -179,6 +183,14 @@
 
             changeP3.style.display="none";
             changeP4.style.display="block";
+        }
+
+        function changeToP1(){
+            let changeP1 = document.querySelector("#One")
+            let changeP4 = document.querySelector("#Four")
+
+            changeP4.style.display="none";
+            changeP1.style.display="block";
         }
 
     </script>
