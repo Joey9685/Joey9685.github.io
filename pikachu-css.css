@@ -1,6 +1,7 @@
 /* body */
 body{
     background-color:antiquewhite    
+    
 }
 
 /* class */
@@ -50,7 +51,6 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 
-    
 }
 
 .contact{
@@ -70,6 +70,7 @@ body{
     justify-content: center;    /* 左右至中 */
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 10px;
+    gap: 15px;
 }
 
 .social{
@@ -80,6 +81,7 @@ body{
     border-radius: 10px;    
     animation: fade 0.5s linear 0s 1;
 }
+
 .pikas{
     
     display:flex;

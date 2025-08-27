@@ -17,7 +17,7 @@
 
     <div style="display: flex;">
         <div class="about"
-            onmouseover="over(this)"onmouseout="out(this)"
+            onmouseover="big(this)"onmouseout="small(this)"
             onmousedown="down(this)"onmouseup="up(this)"
             onclick="changeToItem()"onclick="change()"
         >            
@@ -25,7 +25,7 @@
         </div>
 
         <div class="about"
-            onmouseover="over(this)"onmouseout="out(this)"
+            onmouseover="big(this)"onmouseout="small(this)"
             onmousedown="down(this)"onmouseup="up(this)"
             onclick="changeToPika()"onclick="change()"
         >
@@ -137,15 +137,27 @@
         // item 
         function over(elem){
             elem.style.backgroundImage="linear-gradient(90deg, #EC6DA4, #F4C465)";
+            elem.style.width="130px"
+            elem.style.transition="0.5s"
         }
         function out(elem){
             elem.style.backgroundImage="linear-gradient(90deg, #f4dabb, #f4dabb)";
+            elem.style.width="110px"
+            elem.style.transition="0.5s"
         }
         function down(elem){
             elem.style.fontWeight="bold";
         }
         function up(elem){
             elem.style.fontWeight="normal";
+        }
+
+        function big(elem){
+            elem.style.backgroundImage="linear-gradient(90deg, #EC6DA4, #F4C465)";
+        }
+
+        function small(elem){
+            elem.style.backgroundImage="linear-gradient(90deg, #f4dabb, #f4dabb)";
         }
 
         function changeToPika(){
@@ -162,7 +174,6 @@
             pikaDiv.style.alignItems="center";            
 
         }
-
         function changeToItem(){
             let itemDiv = document.querySelector("#items");
             let pikaDiv = document.querySelector("#pika");
