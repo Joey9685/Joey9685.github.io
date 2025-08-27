@@ -19,7 +19,7 @@
         <div class="about"
             onmouseover="over(this)"onmouseout="out(this)"
             onmousedown="down(this)"onmouseup="up(this)"
-            onclick="changeToItem();"onclick="change()"
+            onclick="changeToItem()"onclick="change()"
         >            
             關於我
         </div>
@@ -27,7 +27,7 @@
         <div class="about"
             onmouseover="over(this)"onmouseout="out(this)"
             onmousedown="down(this)"onmouseup="up(this)"
-            onclick="changeToPika();"onclick="change()"
+            onclick="changeToPika()"onclick="change()"
         >
             皮卡丘
         </div>
@@ -95,28 +95,37 @@
 
 <!------------------------ 皮卡丘 -------------------------->
 
-        <div class="pikas" style="display: none;"
+        <div class="contact" style="display: none" 
+            id="my_pika" >
+            <li >
+                我家皮卡丘
+            </li>
+        </div>
+
+        <div class="pikas" style="display: none"
              id="pika"        
         >            
-        
-        <li class="contact">我家皮卡丘</li>
 
-                <img    id="One" 
-                        onclick="changeToP2()"
-                        src="直播主1.jpg" class="pika-style"/>
+            <img    onclick="prevImage()" 
+                    class="arrow-style" ; src="箭頭L.png"/>
 
-                <img    id="Two"   
-                        style="display:none" onclick="changeToP3()"
-                        src="直播主2.jpg" class="pika-style"/>
-                
-                <img    id="Three"   
-                        style="display:none" onclick="changeToP4()"
-                        src="直播主3.jpg" class="pika-style"/>   
-                        
-                <img    id="Four"   
-                        style="display:none" onclick="changeToP1()"
-                        src="直播主4.jpg" class="pika-style"/>              
-                                                 
+            <img    id="One"
+                    src="直播主1.jpg" class="pika-style"/>
+
+            <img    id="Two"   
+                    style="display:none" onclick="changeToP3()"
+                    src="直播主2.jpg" class="pika-style"/>
+            
+            <img    id="Three"   
+                    style="display:none" onclick="changeToP4()"
+                    src="直播主3.jpg" class="pika-style"/>   
+                    
+            <img    id="Four" 
+                    style="display:none" onclick="changeToP5()"
+                    src="直播主4.jpg" class="pika-style"/>
+                    
+            <img    onclick="nextImage()"
+                    class="arrow-style" ; src="箭頭R.png"/>
 
         </div>
 
@@ -142,55 +151,71 @@
         function changeToPika(){
             let itemDiv = document.querySelector("#items");
             let pikaDiv = document.querySelector("#pika");
+            let mypikaDiv = document.querySelector("#my_pika");
             let changeDiv = document.querySelector("#change");
 
             itemDiv.style.display="none";
             pikaDiv.style.display="block";
-            changeDiv.style.display="flex";
-            changeDiv.style.justifyContent="center";
-            changeDiv.style.alignItems="center";
+            mypikaDiv.style.display="block";
+            pikaDiv.style.display="flex";
+            pikaDiv.style.justifyContent="space-around";
+            pikaDiv.style.alignItems="center";            
 
         }
         function changeToItem(){
             let itemDiv = document.querySelector("#items");
             let pikaDiv = document.querySelector("#pika");
+            let mypikaDiv = document.querySelector("#my_pika");
             let changeDiv = document.querySelector("#change");
 
             itemDiv.style.display="block";
             pikaDiv.style.display="none";
-            changeDiv.style.display="block";
+            mypikaDiv.style.display="none";
+            changeDiv.style.display="block";            
+
         }
 
-        function changeToP2(){
-            let changeP1 = document.querySelector("#One")
-            let changeP2 = document.querySelector("#Two")
+/*------------------------改圖片------------------------*/ 
 
-            changeP1.style.display="none";
-            changeP2.style.display="block";
+
+        // 紀錄目前顯示的圖片 (從第1張開始)
+        let currentIndex = 1;
+        const totalImages = 4; // 總共有 4 張
+
+        // 顯示對應編號的圖片
+        function showImage(index) {
+            for (let i = 1; i <= totalImages; i++) {
+                let img = document.querySelector("#" + getName(i));
+                img.style.display = (i === index) ? "block" : "none";
+            }
         }
 
-        function changeToP3(){
-            let changeP2 = document.querySelector("#Two")
-            let changeP3 = document.querySelector("#Three")
-
-            changeP2.style.display="none";
-            changeP3.style.display="block";
+        // 按右箭頭 → 下一張
+        function nextImage() {
+            currentIndex++;
+            if (currentIndex > totalImages) {
+                currentIndex = 1; // 超過就回第一張
+            }
+            showImage(currentIndex);
         }
 
-        function changeToP4(){
-            let changeP3 = document.querySelector("#Three")
-            let changeP4 = document.querySelector("#Four")
-
-            changeP3.style.display="none";
-            changeP4.style.display="block";
+        // 按左箭頭 → 上一張
+        function prevImage() {
+            currentIndex--;
+            if (currentIndex < 1) {
+                currentIndex = totalImages; // 小於1就回最後一張
+            }
+            showImage(currentIndex);
         }
 
-        function changeToP1(){
-            let changeP1 = document.querySelector("#One")
-            let changeP4 = document.querySelector("#Four")
-
-            changeP4.style.display="none";
-            changeP1.style.display="block";
+        // 幫助函數：編號轉換成圖片 id
+        function getName(num) {
+            switch (num) {
+                case 1: return "One";
+                case 2: return "Two";
+                case 3: return "Three";
+                case 4: return "Four";
+            }
         }
 
     </script>
