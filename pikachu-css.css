@@ -59,6 +59,7 @@ body{
     margin-bottom:20px;
     font-size:1.8em;
     text-align: center;    
+    
 }
 
 .item{
@@ -71,6 +72,7 @@ body{
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 10px;
     gap: 15px;
+    box-shadow: 5px 5px 5px black;
 }
 
 .social{
@@ -80,7 +82,9 @@ body{
     width: 110px;
     border-radius: 10px;    
     animation: fade 0.5s linear 0s 1;
+    box-shadow: 5px 5px 5px black;
 }
+
 
 .pikas{
     
