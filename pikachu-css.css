@@ -131,11 +131,6 @@ body{
 
 @media (max-width:600px){
 
-    body{   
-    margin: 0;
-    padding: 0; /* 建議一起清掉，避免有內距 */
-    background-color:rgb(250, 235, 215) 
-    }
 
     /* 螢幕寬小於500px， 套用此像素 */
     .social{
