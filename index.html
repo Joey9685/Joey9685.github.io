@@ -107,7 +107,7 @@
         >            
 
             <img    onclick="prevImage()" 
-                    class="arrow-style" ; src="箭頭L.png"/>
+                    class="arrowL-style" ; src="箭頭L.png"/>
 
             <img    id="One" 
                     src="直播主1.jpg" class="pika-style"/>
@@ -125,7 +125,7 @@
                     src="直播主4.jpg" class="pika-style"/>
                     
             <img    onclick="nextImage()"
-                    class="arrow-style" ; src="箭頭R.png"/>
+                    class="arrowR-style" ; src="箭頭R.png"/>
 
         </div>
 
@@ -137,13 +137,9 @@
         // item 
         function over(elem){
             elem.style.backgroundImage="linear-gradient(90deg, #EC6DA4, #F4C465)";
-            elem.style.width="130px"
-            elem.style.transition="0.5s"
         }
         function out(elem){
             elem.style.backgroundImage="linear-gradient(90deg, #f4dabb, #f4dabb)";
-            elem.style.width="110px"
-            elem.style.transition="0.5s"
         }
         function down(elem){
             elem.style.fontWeight="bold";
@@ -230,7 +226,6 @@
             }
         }
 
-        
     </script>
 </body>
 </html>

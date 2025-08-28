@@ -83,8 +83,13 @@ body{
     border-radius: 10px;    
     animation: fade 0.5s linear 0s 1;
     box-shadow: 5px 5px 5px black;
+    display: inline-block;
+    transition: all 0.3s ease; /* 平滑動畫 */
 }
 
+.social:hover {
+  transform: translateY(-10px); /* 整個 div 往上浮動 */
+}
 
 .pikas{
     
@@ -94,9 +99,26 @@ body{
 
 }
 
-.arrow-style{
+.arrowR-style{
     border-radius:1000px;
     height: 100px;
+    display: inline-block;
+    transition: all 0.3s ease; /* 平滑動畫 */
+}
+
+.arrowR-style:hover {
+  transform: translateX(10px); /* 整個 div 往上浮動 */
+}
+
+.arrowL-style{
+    border-radius:1000px;
+    height: 100px;
+    display: inline-block;
+    transition: all 0.3s ease; /* 平滑動畫 */
+}
+
+.arrowL-style:hover {
+  transform: translateX(-10px); /* 整個 div 往上浮動 */
 }
 
 .pika-style{
@@ -177,3 +199,6 @@ body{
 
 }
 
+.pic{width:500px; height:350px;overflow:hidden;}
+.pic img{transform:scale(1,1);transition: all 1s ease-out;}
+.pic img:hover{transform:scale(1.2,1.2);}
